@@ -1,0 +1,282 @@
+*{
+
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+/*html,body{
+font-family: tahoma;
+font-size: 16px;
+}*/
+/*.container{
+
+background-image: url(122.jpg) ;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 100vh;
+}
+.button{
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: inline-block;
+    background: deepskyblue;
+    color: white;
+    padding: 1.5rem 4rem;
+}*/
+
+
+
+
+/*POPUP*/
+
+
+.popup{
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
+width: 100vw;
+height: 100vh;
+bottom: 0;
+right: 0;
+background-color: rgba(0, 0, 0, .80);
+z-index: 2;
+visibility: hidden;
+opacity: 0;
+overflow: hidden;
+transition: 0.64 ease-in-out;
+
+}
+
+.popup_inner{
+
+
+    position: relative;
+    bottom: -100vw;
+    right: -100vh;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    max-height: 600px;
+    width: 60%;
+    height: 80%;
+    background-color: white;
+    visibility: hidden;
+    transform: rotate(32deg);
+    transition: 0.64s ease-in-out;
+}
+.popup_photo{
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+width: 55%;
+height: 100%;
+overflow: hidden;
+}
+
+.popup_photo img{
+
+
+    width: auto;
+    height: 100%;
+}
+
+.popup_text{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 60%;
+height: 100%;
+padding: 4rem;
+}
+.popup_text h1{
+
+font-size: 2rem;
+font-weight: 600;
+margin-bottom: 2rem;
+text-transform: uppercase;
+color:  #0a0a0a;
+}
+.popup_text p{
+
+font-size: 0.875rem;
+color:#686868;
+line-height: 1.5;
+}
+.popup:target{
+
+visibility: visible;
+opacity: 1;
+}
+
+.popup:target .popup_inner{
+    visibility: visible;
+    opacity: 1;
+bottom: 0;
+right: 0;
+transform: rotate(0);
+}
+.popup_close{
+position: absolute;
+right: -1rem;
+top: -1rem;
+width: 3rem;
+height: 3rem;
+font-size: 0.875rem;
+font-weight: bold;
+border-radius: 100%;
+background-color: deepskyblue;
+z-index: 4;
+color: white;
+line-height: 3rem;
+text-align: center;
+cursor: pointer;
+text-decoration: none;
+}
+
+
+
+
+/*MODAL*/
+
+.modal{
+    background-color: rgba(0,0,0, .8);
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    text-align: center;
+   }
+   .modal__content{
+    width: 75%;
+    height: 65%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 1em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+   }
+   .modal:target{
+    opacity: 1;
+    visibility: visible;
+   }
+   .modal:target .modal__content{
+    opacity: 1;
+    visibility: visible;
+   }
+   .modal__close{
+    color: #363636;
+    font-size: 2em;
+    position: absolute;
+    top: .5em;
+    right: 1em;
+   }
+   .modal__heading{
+    color: #0099ff;
+    margin-bottom: 1em;
+   }
+   .modal__paragraph{
+    line-height: 1.5em;
+   }
+ .modal-open{
+  display: inline-block;
+  color: #0099ff;
+  /*margin: 2em;*/
+ }
+
+
+
+ /*Dialog*/
+ 
+/*.dialog_open{
+    text-decoration: none;
+    padding:1rem;
+    background:#f93434;
+    display:inline-block;
+    border-radius:3px;
+    margin-top:50px;
+    color:#fff;
+  }*/
+
+  .dialog{
+    display:none;
+    background:rgba(0, 0, 0, .8);
+    position:fixed;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+  }
+  .dialog:target{
+    display:table;
+  }
+  .dialog_dialog{
+    display:table-cell;
+    vertical-align:middle;
+  }
+  
+  .dialog_inner{
+    background:rgb(255, 255, 255);
+    width:60%;
+    min-width:300px;
+    margin:auto;
+    position:relative;
+    
+    animation: slideUp 0.3s ease-in-out;
+  }
+  
+  .dialog_header{
+    background:#2980b9;
+    color:rgba(255, 255, 255, 0.8);
+    padding:0.6rem;
+    position:relative;
+  }
+  .popup_title{
+    margin:0;
+  }
+  .dialog_close{
+    color:#fff;
+    text-decoration: none;
+    position:absolute;
+    top:1rem;
+    right:1rem;
+  }
+  .dialog_image{
+    display:block;
+    margin:1rem auto;
+  }
+  .dialog_text{
+    padding:0 1rem;
+    line-height:1.5;
+  }
+  .dialog_footer{
+    padding:1rem;
+    border-top:1px solid #ccc;
+  }
+  
+  @keyframes slideUp{
+    from{
+      opacity:0;
+      bottom: -200px;
+    }
+    to{
+      opacity:1;
+      bottom:0;
+    }
+  }
+
