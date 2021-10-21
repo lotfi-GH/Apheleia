@@ -1,0 +1,84 @@
+@media only screen and (min-width: 768px) {
+.bout{
+    border: 3px solid black ;
+    border-radius: 4px;
+    color: black;
+    background-color: transparent;
+    font-family: century gothic;
+    font-size: 20px;
+    /*margin-left: 600px;*/
+    transition-duration: 0.4s;
+    width: 80%;
+    height: 50px;
+    padding: 10px 15px;
+
+}
+
+
+.boutCl{
+    border: 3px solid black ;
+    border-radius: 4px;
+    color: white;
+    background-color: crimson;
+    font-family: century gothic;
+    font-size: 20px;
+   /* margin-left: 600px;*/
+
+}
+.bout:hover{
+    border: 3px solid crimson ;
+    border-radius: 4px;
+    color: crimson ;
+    background-color: whitesmoke;
+    font-family: century gothic;
+    font-size: 20px;
+   /* margin-left: 600px;*/
+
+}
+}
+@media only screen and (max-width: 768px) {
+    .bout{
+        border: 3px solid black ;
+        border-radius: 4px;
+        color: black;
+        background-color: white;
+        font-family: century gothic;
+        font-size: 20px;
+        /*margin-left: 600px;*/
+        transition-duration: 0.4s;
+        width: 100%;
+        height: 50px;
+        padding: 10px 15px;
+    
+    }
+    
+    .boutCl{
+        border: 3px solid cadetblue ;
+        border-radius: 4px;
+        color: white;
+        background-color: crimson;
+        font-family: century gothic;
+        font-size: 20px;
+       /* margin-left: 600px;*/
+    
+    }
+    .bout:hover{
+        border: 3px solid crimson ;
+        border-radius: 4px;
+        color: crimson ;
+        background-color: whitesmoke;
+        font-family: century gothic;
+        font-size: 20px;
+       /* margin-left: 600px;*/
+    
+    }
+
+}
+
+.bout-r{border-color: #cc0000;color:#cc0000;background-color: transparent;} 
+.bout-r:hover{border-color: dodgerblue;color:dodgerblue;background-color: transparent;} 
+.bout-g{border-color:#33cc66;color:#33cc66;background-color: transparent;}
+.bout-b{border-color:#0099ff;color:#0099ff;background-color: transparent;}
+.bout-p{border-color:#9900cc;color:#9900cc;background-color: transparent;}
+.bout-y{border-color:#ffcc00;color:#ffcc00;background-color: transparent;}
+.bout-z{border-color:white;color:white;background-color: transparent;}

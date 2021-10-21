@@ -1,0 +1,21 @@
+.avatar{
+    border:solid dodgerblue;
+    border-radius: 50%;
+    width: 50px;
+    transition-duration: 0.4s;
+}
+
+.avatar-big{ width: 100px;}
+.avatar-small{width: 30px;}
+
+.avatar:hover{
+    border:solid crimson;
+    border-radius: 50%;
+ 
+}
+
+
+
+.img-border{border:2px solid dodgerblue}
+.img-round{border-radius: 50%}
+.img-rad{border-radius: 10%}

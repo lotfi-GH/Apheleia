@@ -1,0 +1,143 @@
+/*SLIDER*/
+.slider-auto{
+    width:80%;
+    max-width: 1000px;
+    overflow: hidden;
+    border: 5px solid black;
+    margin-left: 12%;
+}
+
+.slider-auto figure{
+    position: relative;
+    width: 500%;
+    padding:0;
+    margin: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+
+.slider-auto figure img{
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+@keyframes slidy{
+    0%{left:0%;}
+    20%{left:0%;}
+    25%{left:-100%;}
+    45%{left:-100%;}
+    50%{left:-200%;}
+    70%{left:-200%;}
+    75%{left:-300%;}
+    95%{left:-300%;}
+    100%{left:-400%;}
+}
+
+
+
+
+/*ALBUM*/
+.album-container {
+    padding: 0;
+    margin: 1em auto;
+    display: inline-block;
+    max-width: 100%;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    list-style-type: none;
+  }
+  .album-container .album-content {
+    height: 300px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 0;
+    box-shadow: 0 5px 5px -5px #333;
+    padding: 0;
+    text-align: center;
+    line-height: 296px;
+  }
+  .album-container .album-content img {
+    opacity: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    max-height: 300px;
+    max-width: 400px;
+    vertical-align: middle;
+    -webkit-animation-name: ziim;
+    -webkit-animation-duration: 0.6s;
+    animation-name: ziim;
+    animation-duration: 0.6s;
+  }
+  @-webkit-keyframes ziim {
+    from {-webkit-transform:scale(1)} 
+    to {-webkit-transform:scale(0)}
+  }
+  @keyframes ziim {
+    from {transform:scale(1)} 
+    to {transform:scale(0)}
+  }
+  .album-container .album-toggle:checked ~ .album-content,.album-container .album-toggle.active ~ .album-content {
+    height: 100%;
+    width: 100%;
+  }
+  .album-container .album-toggle:checked ~ .album-content img,.album-container .album-toggle.active ~ .album-content img {
+    opacity: 1;
+  }
+  .album-fullscreen {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 4px 4px 0;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    background: #000 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAQAAAAn3TzeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAA/SURBVHjaYvjPQA5kGCHaUEApQylDKZrY4NEG5UG1YZUbetpKCcJBoG04R8DQyAGjJRfDf4b/DAAAAAD//wMAswEnryWu8FcAAAAASUVORK5CYII=') no-repeat center center;
+  }
+  .albumFullScreen:checked,.albumFullScreen.active {
+    display: block;
+    height: 100%;
+  }
+  .albumFullScreen:checked+.album-container,.albumFullScreen.active+.album-container {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;  
+  }
+  .albumFullScreen:checked+.album-container .album-toggle:checked ~.album-content >li,.albumFullScreen.active+.album-container .album-toggle:checked ~.album-content >li {
+    height: 100%;
+    line-height: 99vh;
+  }
+  .albumFullScreen:checked+.album-container .album-fullscreen,.albumFullScreen.active+.album-container .album-fullscreen {
+    width: 54px;
+    height: 54px;
+    background: #000 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAQAAAAmTKJWAAAACXBIWXMAAAsTAAALEwEAmpwYAAADGGlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjaY2BgnuDo4uTKJMDAUFBUUuQe5BgZERmlwH6egY2BmYGBgYGBITG5uMAxIMCHgYGBIS8/L5UBFTAyMHy7xsDIwMDAcFnX0cXJlYE0wJpcUFTCwMBwgIGBwSgltTiZgYHhCwMDQ3p5SUEJAwNjDAMDg0hSdkEJAwNjAQMDg0h2SJAzAwNjCwMDE09JakUJAwMDg3N+QWVRZnpGiYKhpaWlgmNKflKqQnBlcUlqbrGCZ15yflFBflFiSWoKAwMD1A4GBgYGXpf8EgX3xMw8BSMDVQYqg4jIKAUICxE+CDEESC4tKoMHJQODAIMCgwGDA0MAQyJDPcMChqMMbxjFGV0YSxlXMN5jEmMKYprAdIFZmDmSeSHzGxZLlg6WW6x6rK2s99gs2aaxfWMPZ9/NocTRxfGFM5HzApcj1xZuTe4FPFI8U3mFeCfxCfNN45fhXyygI7BD0FXwilCq0A/hXhEVkb2i4aJfxCaJG4lfkaiQlJM8JpUvLS19QqZMVl32llyfvIv8H4WtioVKekpvldeqFKiaqP5UO6jepRGqqaT5QeuA9iSdVF0rPUG9V/pHDBYY1hrFGNuayJsym740u2C+02KJ5QSrOutcmzjbQDtXe2sHY0cdJzVnJRcFV3k3BXdlD3VPXS8Tbxsfd99gvwT//ID6wIlBS4N3hVwMfRnOFCEXaRUVEV0RMzN2T9yDBLZE3aSw5IaUNak30zkyLDIzs+ZmX8xlz7PPryjYVPiuWLskq3RV2ZsK/cqSql01jLVedVPrHzbqNdU0n22VaytsP9op3VXUfbpXta+x/+5Em0mzJ/+dGj/t8AyNmf2zvs9JmHt6vvmCpYtEFrcu+bYsc/m9lSGrTq9xWbtvveWGbZtMNm/ZarJt+w6rnft3u+45uy9s/4ODOYd+Hmk/Jn58xUnrU+fOJJ/9dX7SRe1LR68kXv13fc5Nm1t379TfU75/4mHeY7En+59lvhB5efB1/lv5dxc+NH0y/fzq64Lv4T8Ffp360/rP8f9/AA0ADzT6lvFdAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAD+SURBVHja7Jc9CoQwEIW9gkdJYyFoIeiFvIaH0VLB0sLGI3iE1DbhbRciGDJrltnFHV+Zpx9I3vwkSPiUCExgAvsH2A7tUY/Sukr0Xt9Ohx3wPQtq66qxeH0HHWa8H1nRWFeD1eszdJiOhulPwKi/8RZMY8PsqIOyLoXudLad3rsB29CicqSQWlcKdTprscXBJuTkHOWY4mAjMjIswxgHm1GRYRXmn4eZy1yF5ObO3ClXbq5CcnP3RrkaLnMVkpu7gQ4rLnMVkpu7Qprnk2GsF4T16rOGmrVcPbfqf6l5so4FrAMP6yjHOqQyjN+siwXrysS6DEqnFpjABEbRawACMWGE7CJdswAAAABJRU5ErkJggg==') no-repeat center center;
+  }
+  .albumFullScreen:checked+.album-container img,.albumFullScreen.active+.album-container img {
+    width: auto;
+    height: 100%;
+    max-height: 100vh;
+    max-width: 100vw;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  input[type=checkbox].albumFullScreen,input[type=checkbox].album-toggle {
+    visibility: hidden;  
+  }

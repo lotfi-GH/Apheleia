@@ -1,0 +1,27 @@
+@import url("components/button.css");
+@import url("components/image.css");
+@import url("components/grid.css");
+@import url("components/navbar.css");
+@import url("components/tab.css");
+/*@import url("components/dialog.css");*/
+@import url("components/but-hover.css");
+@import url("components/form.css");
+@import url("components/card.css");
+@import url("components/banner.css");
+@import url("components/alert.css");
+@import url("components/table.css");
+@import url("components/tooltip.css");
+@import url("components/slider.css");
+@import url("components/typo.css");
+@import url("components/list.css");
+@import url("components/carousel.css");
+@import url("components/checkbox.css");
+@import url("components/modal.css");
+@import url("components/radio.css");
+@import url("components/dropdown.css");
+@import url("components/font-awesome.css");
+@import url("components/font-awesome.min.css");
+body{
+    font-family: century gothic;
+    margin: 0;
+}

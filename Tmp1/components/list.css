@@ -1,0 +1,99 @@
+/*LIST*/
+.list{
+width: 100%;
+display: table;
+align-items: center;
+}
+
+.list li{
+    width:100%;
+    list-style-type: none;
+    border: 2px solid rgb(71, 70, 70);
+    margin-bottom: 20px;
+    transition-duration: 0.4s;
+    break-inside: avoid;
+}
+.list li:hover{
+    background-color: rgb(170, 208, 209);
+}
+.list li img{
+float: left;
+width: 150px;
+height: 150px;
+}
+.list li p{
+margin: 6%;
+text-align: center;
+/*flex:1 0 auto;*/
+}
+
+@media only screen and (max-width: 768px) {
+.list{
+    display: flex;
+}
+    .list li img{
+        float: left;
+        width: 100px;
+        height: 100px;
+        }
+       /* .list li p{
+          
+        }
+        .list li img:hover .list li p{
+                visibility: visible;
+                opacity: 1;
+        }*/
+}
+
+
+
+/*LIST PRODUCT*/
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    }
+    .sig-product{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgb(0, 0, 0,.7);
+    transition: all .3s linear;
+    }
+    .sig-product img{
+        width: 100%;
+        transition: all .3s linear;
+    }
+    .product-area{
+    position: absolute;
+    bottom: 50px;
+    right: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0,0.5);
+    transition: all .3s linear;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    .product-text{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20;
+    letter-spacing: 2px;
+    margin: 15px;
+    color: #fff;
+    }
+    .sig-product:hover .product-area{
+    right: 0;
+     }
+     .sig-product:hover img{
+    transform: scale(1.2);
+    
+     }
